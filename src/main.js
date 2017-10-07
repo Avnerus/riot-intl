@@ -5,7 +5,7 @@ import {
     __addLocaleData
 } from './riot-intl';
 
-export default {
+export {
     IntlMixin           : IntlMixin,
     __addLocaleData     : __addLocaleData
 };
