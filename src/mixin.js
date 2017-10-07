@@ -73,13 +73,17 @@ const IntlMixin = {
         return this._format('number', num || 0, options);
     },
 
-    formatMessage: function (message, values) {
+    formatMessage: function (id, values) {
         var locales = this.locales || this.parent.locales;
         var formats = this.formats || this.parent.formats;
+        var messages = this.messages || this.parent.messages;
 
         // When `message` is a function, assume it's an IntlMessageFormat
         // instance's `format()` method passed by reference, and call it. This
         // is possible because its `this` will be pre-bound to the instance.
+
+        message = messages[id];
+
         if (typeof message === 'function') {
             return message(values);
         }

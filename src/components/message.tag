@@ -3,14 +3,14 @@
     
     <script>
         updateItemData() {
-            var message = opts.message;
+            var id = opts.id;
             var values = Object.keys(opts).reduce(function (values, name) {
                 var value = opts[name];
                 values[name] = value;
                 return values;
             }, {});
             if (message) {
-                this.formattedMessage = this.formatMessage(message, values);
+                this.formattedMessage = this.formatMessage(id, values);
             }
         };
 
