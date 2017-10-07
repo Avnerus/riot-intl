@@ -22,7 +22,7 @@
   "jsnext:main": "src/main.js",
   "browser": "src/main.js",
   "dependencies": {
-    "intl-format-cache": "git+https://github.com/Avnerus/riot-intl.git",
+    "intl-format-cache": "git+https://github.com/Avnerus/intl-format-cache.git",
     "intl-messageformat": "^1.3.0",
     "intl-relativeformat": "^1.3.0",
     "reify": "^0.12.3"
