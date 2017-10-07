@@ -82,7 +82,7 @@ const IntlMixin = {
         // instance's `format()` method passed by reference, and call it. This
         // is possible because its `this` will be pre-bound to the instance.
 
-        message = messages[id];
+        var message = messages[id];
 
         if (typeof message === 'function') {
             return message(values);
