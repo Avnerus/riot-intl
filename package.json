@@ -12,17 +12,17 @@
   ],
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/ListnPlay/riot-intl/issues"
+    "url": "https://github.com/Avnerus/riot-intl/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ListnPlay/riot-intl.git"
+    "url": "git@github.com:Avnerus/riot-intl.git"
   },
   "main": "src/main",
   "jsnext:main": "src/main.js",
   "browser": "src/main.js",
   "dependencies": {
-    "intl-format-cache": "^2.0.5",
+    "intl-format-cache": "git+https://github.com/Avnerus/riot-intl.git",
     "intl-messageformat": "^1.3.0",
     "intl-relativeformat": "^1.3.0",
     "reify": "^0.12.3"
@@ -54,5 +54,5 @@
     "prepublish": "grunt",
     "travis": "./tests/smoke/saucelabs.sh"
   },
-  "homepage": "https://github.com/ListnPlay/riot-intl"
+  "homepage": "https://github.com/Avnerus/riot-intl"
 }
