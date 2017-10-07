@@ -6,6 +6,6 @@ import {
 } from './riot-intl';
 
 export {
-    IntlMixin           : IntlMixin,
-    __addLocaleData     : __addLocaleData
+    IntlMixin,
+    __addLocaleData
 };
