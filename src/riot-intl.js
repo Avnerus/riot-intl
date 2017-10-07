@@ -5,21 +5,16 @@ import IntlRelativeFormat from 'intl-relativeformat';
 
 import defaultLocale from './en';
 
-import FormattedMessage from './components/message.tag';
-import FormattedDate from './components/date.tag';
-import FormattedNumber from './components/number.tag';
-import FormattedTime from './components/time.tag';
-import FormattedRelative from './components/relative.tag';
+import './components/message.tag';
+import './components/date.tag';
+import './components/number.tag';
+import './components/time.tag';
+import './components/relative.tag';
 
 import IntlMixin from './mixin';
 
 export {
-    IntlMixin,
-    FormattedMessage,
-    FormattedDate,
-    FormattedNumber,
-    FormattedTime,
-    FormattedRelative
+    IntlMixin
 };
 
 export function __addLocaleData(data) {
