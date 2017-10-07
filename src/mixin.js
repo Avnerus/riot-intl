@@ -13,7 +13,7 @@ function assertIsDate(date, errMsg) {
     }
 }
 
-export default {
+const IntlMixin = {
     filterFormatOptions: function (obj, defaults) {
         if (!defaults) { defaults = {}; }
 
@@ -148,3 +148,5 @@ export default {
         }
     }
 };
+
+export default IntlMixin;
