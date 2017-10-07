@@ -9,7 +9,7 @@
                 values[name] = value;
                 return values;
             }, {});
-            if (message) {
+            if (id) {
                 this.formattedMessage = this.formatMessage(id, values);
             }
         };
