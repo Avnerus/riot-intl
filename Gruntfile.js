@@ -57,11 +57,11 @@ module.exports = function (grunt) {
                 options: {
                     prelude: [
                         '// GENERATED FILE',
-                        'var riotIntl = require("./riot-intl");\n\n'
+                        "import {__addLocaleData} from 'riot-intl'\n\n"
                     ].join('\n'),
 
                     wrapEntry: function (entry) {
-                        return 'riotIntl.__addLocaleData(' + entry + ');';
+                        return '_addLocaleData(' + entry + ');';
                     }
                 }
             },
@@ -70,8 +70,13 @@ module.exports = function (grunt) {
                 dest: 'dist/locale-data/',
 
                 options: {
+                    prelude: [
+                        '// GENERATED FILE',
+                        "import {__addLocaleData} from 'riot-intl'\n\n"
+                    ].join('\n'),
+
                     wrapEntry: function (entry) {
-                        return 'riotIntl.__addLocaleData(' + entry + ');';
+                        return '__addLocaleData(' + entry + ');';
                     }
                 }
             }
