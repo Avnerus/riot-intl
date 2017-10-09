@@ -6,7 +6,7 @@
         ];
 
         var updateItemData = function() {
-            var value = opts.value;
+            var value = opts.riotValue;
             var format = opts.format;
             var defaults = format && this.getNamedFormat('relative', format);
             var options  = this.filterFormatOptions(opts, defaults);

@@ -9,7 +9,7 @@
         ];
 
         updateItemData() {
-            var value = opts.value;
+            var value = opts.riotValue;
             var format = opts.format;
             var defaults = format && this.getNamedFormat('number', format);
             var options  = this.filterFormatOptions(opts, defaults);
