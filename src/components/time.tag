@@ -7,7 +7,7 @@
             'timeZoneName'
         ];
 
-        var updateItemData = function() {
+        updateItemData() {
             /* Support only short. workaround for explorer. need to upgrade and rewrite riot-intl 
             var value = opts.value
             var ms = value % 1000;

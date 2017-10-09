@@ -5,7 +5,7 @@
             'style', 'units'
         ];
 
-        var updateItemData = function() {
+        updateItemData() {
             var value = opts.riotValue;
             var format = opts.format;
             var defaults = format && this.getNamedFormat('relative', format);
