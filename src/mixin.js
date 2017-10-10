@@ -45,9 +45,9 @@ const IntlMixin = {
         var opts   = this.opts;
 
         return {
-            locales:  this.locales,
-            formats:  this.formats,
-            messages: this.messages
+            locales:  this.i18n.locales,
+            formats:  this.i18n.formats,
+            messages: this.i18n.messages
         };
     },
 
@@ -74,9 +74,9 @@ const IntlMixin = {
     },
 
     formatMessage: function (id, values) {
-        var locales = this.locales || this.parent.locales;
-        var formats = this.formats || this.parent.formats;
-        var messages = this.messages || this.parent.messages;
+        var locales = this.i18n.locales || this.parent.i18n.locales;
+        var formats = this.i18n.formats || this.parent.i18n.formats;
+        var messages = this.i18n.messages || this.parent.i18n.messages;
 
         // When `message` is a function, assume it's an IntlMessageFormat
         // instance's `format()` method passed by reference, and call it. This
@@ -96,7 +96,7 @@ const IntlMixin = {
     },
 
     getIntlMessage: function (path) {
-        var messages  = this.messages || this.parent.messages;
+        var messages  = this.i18n.messages || this.i18n.parent.messages;
         var pathParts = path.split('.');
 
         var message;
@@ -116,7 +116,7 @@ const IntlMixin = {
     },
 
     getNamedFormat: function (type, name) {
-        var formats = this.formats || this.parent.formats;
+        var formats = this.i18n.formats || this.parent.i18n.formats;
         var format  = null;
 
         try {
@@ -133,7 +133,7 @@ const IntlMixin = {
     },
 
     _format: function (type, value, options, formatOptions) {
-        var locales = this.locales || this.parent.locales;
+        var locales = this.i18n.locales || this.parent.i18n.locales;
 
         if (options && typeof options === 'string') {
             options = this.getNamedFormat(type, options);
