@@ -17,7 +17,5 @@
         this.on('update', function() {
             this.updateItemData();
         });
-
-        this.updateItemData();
     </script>
 </formatted-message>
