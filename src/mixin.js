@@ -73,10 +73,14 @@ const IntlMixin = {
         return this._format('number', num || 0, options);
     },
 
-    formatMessage: function (id, values) {
-        var locales = this.i18n.locales || this.parent.i18n.locales;
-        var formats = this.i18n.formats || this.parent.i18n.formats;
-        var messages = this.i18n.messages || this.parent.i18n.messages;
+    formatMessage: function (id, values, i18n = {}, locale = null) {
+        var locales = i18n.locales || this.i18n.locales || this.parent.i18n.locales;
+        var formats = i18n.formats || this.i18n.formats || this.parent.i18n.formats;
+        var messages = i18n.messages || this.i18n.messages || this.parent.i18n.messages;
+
+        if (locale) {
+            messages = messages[locale];
+        }
 
         // When `message` is a function, assume it's an IntlMessageFormat
         // instance's `format()` method passed by reference, and call it. This
