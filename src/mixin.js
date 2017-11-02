@@ -88,6 +88,10 @@ const IntlMixin = {
 
         var message = messages[id];
 
+        if (!message) {
+            throw new Error("No message for " + id);
+        }
+
         if (typeof message === 'function') {
             return message(values);
         }
